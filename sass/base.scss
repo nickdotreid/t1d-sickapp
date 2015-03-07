@@ -25,19 +25,19 @@ body{
 	height:$space-size*3;
 	overflow:hidden;
 	text-indent: -3000px;
-	background-image:url('../img/sprite.png');
+	background-image:url('../img/sprites.png');
 	background-repeat:no-repeat;
 	background-position:0px -5px;
 }
 
 .icon-home{
 	width:26px;
-	background-position:-66px -5px;
+	background-position:-95px -5px;
 }
 
 .icon-back{
 	width:24px;
-	background-position:-11px -5px;
+	background-position:-0px -5px;
 }
 
 .icon-shots{
@@ -69,7 +69,6 @@ body{
 		}
 		.icon{
 			display:none;
-			background-image:url('../img/icons.png');
 		}
 		.icon-aligned{
 			position:absolute;
