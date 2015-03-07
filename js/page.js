@@ -59,9 +59,11 @@ var Pane = Backbone.View.extend({
 	},
 	enter: function(){
 		this.$el.show();
+		if(this.$el.hasClass("pane-why")) $('.navbar:not(.pane .navbar)').hide();
 	},
 	exit: function(){
 		this.$el.hide();
+		if(this.$el.hasClass("pane-why")) $('.navbar:not(.pane .navbar)').show();
 	},
 });
 
