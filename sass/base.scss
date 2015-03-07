@@ -19,6 +19,9 @@ body{
 	.large{
 		font-size:$font-size-large;
 	}
+	.small{
+		font-size: $font-size-small;
+	}
 	.alert{
 		font-size: $font-size-small;
 		border: 1px $brand-primary dotted;
@@ -35,6 +38,9 @@ body{
 	background-image:url('../img/sprites.png');
 	background-repeat:no-repeat;
 	background-position:0px -5px;
+}
+.icon-centered{
+	margin: 0px auto;
 }
 
 .icon-home{
@@ -56,6 +62,12 @@ body{
 	height:132px;
 	width:115px;
 	background-position:-145px 0px;	
+}
+
+.icon-health{
+	width: 115px;
+	height: 115px;
+	background-position:-367px 0px;
 }
 
 .actions{
