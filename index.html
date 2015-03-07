@@ -29,12 +29,69 @@
     <div id="home" class="pane">
         <div class="content content-main">
             <div class="container">
-                <p>I have type 1 diabetes and I feel sick</p>
+                <p class="large">I have type 1 diabetes and I feel sick</p>
             </div>
         </div>
         <div class="actions navbar navbar-fixed-bottom">
             <div class="container">
-                <a class="btn btn-default first" href="#shotsOrPump">Yes</a>
+                <a class="btn btn-default first" href="#disclaimer">Yes</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="disclaimer" class="pane">
+        <div class="content content-main">
+            <div class="container">
+                <p class="large">This does not replace medical advice from your diabetes health care team.</p>
+                <p class="alert">This is an informational resource provided by the UM Pediatric Endocrinology Clinic for our established patients.</p>
+            </div>
+        </div>
+        <div class="actions navbar navbar-fixed-bottom">
+            <div class="container">
+                <a class="btn btn-default first" href="#dka">Ok</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="dka" class="pane">
+        <div class="content content-main">
+            <div class="container">
+                <p class="large">Do you have signs of keto-acidosis (DKA): lethargy, confusion, or breathing deeply?</p>
+            </div>
+        </div>
+        <div class="actions navbar navbar-fixed-bottom">
+            <div class="container">
+                <a class="btn btn-default first" href="#dka-callDoctor">Yes</a>
+                <a class="btn btn-default first" href="#shotsOrPump">No</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="dka-callDoctor" class="pane">
+        <div class="content content-main">
+            <div class="container">
+                <p>Check your blood sugar and check ketones, then</p>
+                <p class="large">CALL YOUR DOCTOR</p>
+                <a href="#why-dka" class="why">WHY CALL THE DOCTOR?</a>
+                <p>Know your blood sugar and ketone levels before you call.</p>
+            </div>
+        </div>
+        <div class="actions navbar navbar-fixed-bottom">
+            <div class="container">
+                <a class="btn btn-default first" href="#done">Done</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="why-dka" class="pane">
+        <div class="content content-main">
+            <div class="container">
+                <p class="large">Because you may be developing diabetic keto-acidosis.</p>
+            </div>
+        </div>
+        <div class="actions navbar navbar-fixed-bottom">
+            <div class="container">
+                <a class="btn btn-default first" href="#dka-callDoctor">Back</a>
             </div>
         </div>
     </div>
@@ -42,7 +99,7 @@
     <div id="shotsOrPump" class="pane">
         <div class="content content-main">
           <div class="container">
-            <p>Are you on shots or a pump?</p>
+            <p class="large">Are you on shots or a pump?</p>
           </div>
         </div>
         <div class="actions navbar navbar-fixed-bottom">
