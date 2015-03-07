@@ -1,7 +1,4 @@
 var Pane = Backbone.View.extend({
-	events:{
-		'click a':'hidePane',
-	},
 	initialize: function() {
 		this.render();
 	},
@@ -58,8 +55,12 @@ var Pane = Backbone.View.extend({
 		  		},
 		  	});
 		  });
+		this.$el.hide();
 	},
-	hidePane: function(event){
+	enter: function(){
+		this.$el.show();
+	},
+	exit: function(){
 		this.$el.hide();
 	},
 });
@@ -69,19 +70,20 @@ var Workspace = Backbone.Router.extend({
 		"*path":"page", // gotta catch em all
 	},
 	page: function(path){
-		var pane = false;
+		var router = this;
+		if(router.currentPane) router.currentPane.exit();
+		router.currentPane = false;
 		$('#'+path+':first').each(function(){
-			pane = new Pane({
+			router.currentPane = new Pane({
 				el:this,
 			});
 		});
-		if(!pane){
-			pane = new Pane({
+		if(!router.currentPane){
+			router.currentPane = new Pane({
 				el:$('.pane:first')[0],
 			});
 		}
-
-
+		router.currentPane.enter();
 	}
 });
 var workspace = new Workspace();
