@@ -28,6 +28,7 @@ body{
 	text-align:center;
 	.large{
 		font-size:$font-size-large;
+		line-height:1.1em;
 	}
 	.small{
 		font-size: $font-size-small;
@@ -36,6 +37,10 @@ body{
 		font-size: $font-size-small;
 		border: 1px $brand-primary dotted;
 		border-radius: $space-size/2;
+	}
+	.why{
+		font-size: $font-size-small;
+		font-weight:300;
 	}
 }
 
@@ -61,11 +66,6 @@ body{
 .icon-back{
 	width:24px;
 	background-position:-0px -5px;
-}
-
-.icon-plus{
-	width:10px;
-	height:10px;
 }
 
 .icon-shots{
