@@ -23,7 +23,7 @@ body{
 }
 
 .content-main{
-	padding-top:75px;
+	padding-top: $space-size/2;
 	padding-bottom:$space-size;
 	text-align:center;
 	.large{
@@ -85,10 +85,28 @@ body{
 	background-position:-202px 0px;
 }
 
+.icon-face-happy{
+	width:80px;
+	height:80px;
+	background-position:-202px -129px;
+}
+
 .icon-health{
 	width: 115px;
 	height: 115px;
 	background-position:-367px 0px;
+}
+
+.icon-check-blood-sugar{
+	width:250px;
+	height:185px;
+	background-position:-800px 0px;
+}
+
+.icon-ketones{
+	width:287px;
+	height:90px;
+	background-position:-1153px -33px;	
 }
 
 .actions{
