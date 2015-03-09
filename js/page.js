@@ -26,7 +26,7 @@ var Pane = Page.extend({
 
 		if(available_space > 0){
 			this.$('.content').css({
-				'margin-top': available_space/2,
+				'margin-top': available_space/2 + $('.navbar:first').height(),
 				'margin-bottom': available_space/2,
 			});
 		}else{
