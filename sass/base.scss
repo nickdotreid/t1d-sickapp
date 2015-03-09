@@ -118,31 +118,21 @@ body{
 		display:block;
 		position:relative;
 		float:left;
+		width:100%;
 		padding:$space-size 0px;
 		font-size:$font-size-btn;
+		border-color:#000;
 		border-width:0px;
-		border-left-width:1px;
 		text-transform: uppercase;
-		&.first{
+	}
+	.two-btns{
+		.btn{
+			width:50%;
+			border-left-width:1px;
+		}
+		.btn.first{
 			border-left-width:0px;
 		}
-		.icon{
-			display:none;
-		}
-		.icon-aligned{
-			position:absolute;
-			top:0px;
-			left:0px;
-			z-index:5;
-		}
-		.dotted-line{
-			display:block;
-			position:absolute;
-			top:0px;
-			left:0px;
-			width:0px;
-			border-left: #fff 1px dashed;
-			z-index:1;
-		}
 	}
+
 }
