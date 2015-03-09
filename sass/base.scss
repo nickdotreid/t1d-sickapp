@@ -2,6 +2,12 @@ body{
 	font-weight: 300;
 }
 
+body.js{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
 .js .pane{
 	display:none;
 	position:absolute;
@@ -104,9 +110,9 @@ body{
 }
 
 .icon-ketones{
-	width:287px;
-	height:90px;
-	background-position:-1153px -33px;	
+	width:271px;
+	height:108px;
+	background-position:-1106px -33px;	
 }
 
 .actions{
@@ -124,6 +130,7 @@ body{
 		border-color:#000;
 		border-width:0px;
 		text-transform: uppercase;
+		white-space:normal;
 	}
 	.two-btns{
 		.btn{
