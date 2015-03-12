@@ -58,25 +58,36 @@ var Workspace = Backbone.Router.extend({
 	},
 	page: function(path,args){
 		if(args){
-			alert(args)
-			if(args.indexOf('pump')) this.device = 'pump';
-			if(args.indexOf('shots')) this.device = 'shots';
-			if(args.indexOf('high')) this.bloodSugar = 'high';
-			if(args.indexOf('low')) this.bloodSugar = 'low';
-			if(args.indexOf('small')) this.ketones = 'small';
-			if(args.indexOf('large')) this.ketones = 'large';
+			if(args.indexOf('pump') >= 0) this.device = 'pump';
+			if(args.indexOf('shots') >= 0) this.device = 'shots';
+			if(args.indexOf('high') >= 0) this.bloodsugar = 'high';
+			if(args.indexOf('low') >= 0) this.bloodsugar = 'low';
+			if(args.indexOf('small') >= 0) this.ketones = 'small';
+			if(args.indexOf('large') >= 0) this.ketones = 'large';
 		}
 		var router = this;
 		if(router.currentPane) router.currentPane.exit();
 		router.currentPane = false;
 
 		if(path){
-			var matchedPages = $("#"+path);
+			var matchedPages = $(".pane[pane-id="+path+"]");
 		}else{
 			var matchedPages = $('.pane:first');
 		}
 		if(matchedPages.length > 1){
-			// filter
+			var router = this;
+			matchedPages = _.filter(matchedPages, function(div){
+				var pane = $(div);
+				checkMatch = function(attr){
+					if(!pane.data(attr)) return true;
+					if(router[attr] == pane.data(attr)) return true;
+					return false;
+				}
+				if(!checkMatch("device")) return false;
+				if(!checkMatch("bloodsugar")) return false;
+				if(!checkMatch("ketones")) return false;
+				return true;
+			});
 		}
 		router.currentPane = new Pane({
 			el:matchedPages[0],

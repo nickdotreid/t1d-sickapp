@@ -26,7 +26,7 @@
       </div>
     </nav>
 
-    <div id="home" class="pane">
+    <div pane-id="home" class="pane">
         <div class="content content-main">
             <div class="container">
                 <p class="large">I have type 1 diabetes and I feel sick</p>
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div id="disclaimer" class="pane">
+    <div pane-id="disclaimer" class="pane">
         <div class="content content-main">
             <div class="container">
                 <p class="large">This does not replace medical advice from your diabetes health care team.</p>
@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    <div id="dka" class="pane">
+    <div pane-id="dka" class="pane">
         <div class="content content-main">
             <div class="container">
                 <p class="large">Do you have signs of keto-acidosis (DKA): lethargy, confusion, or breathing deeply?</p>
@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <div id="dka-callDoctor" class="pane">
+    <div pane-id="dka-callDoctor" class="pane">
         <div class="content content-main">
             <div class="container">
                 <p>Check your blood sugar and check ketones, then</p>
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div id="why-dka" class="pane pane-why">
+    <div pane-id="why-dka" class="pane pane-why">
         <div class="content content-main">
             <div class="container">
                 <p class="large">Because you may be developing diabetic keto-acidosis.</p>
@@ -98,7 +98,7 @@
         </div>
     </div>
 
-    <div id="shotsOrPump" class="pane">
+    <div pane-id="shotsOrPump" class="pane">
         <div class="content content-main">
           <div class="container">
             <p class="large">Are you on shots or a pump?</p>
@@ -118,7 +118,7 @@
         </div>
     </div>
 
-    <div id="throwing-up" class="pane">
+    <div pane-id="throwing-up" class="pane">
         <div class="content content-main">
           <div class="container">
             <p class="large">Are you throwing up a lot (3+ times?)<br />or<br />having trouble drinking?</p>
@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <div id="check-blood-sugar" class="pane">
+    <div pane-id="check-blood-sugar" class="pane">
         <div class="content content-main">
           <div class="container">
             <p class="large">CHECK YOUR BLOOD SUGAR</p>
@@ -149,7 +149,7 @@
         </div>
     </div>
 
-    <div id="why-blood-sugar" class="pane pane-why">
+    <div pane-id="why-blood-sugar" class="pane pane-why">
         <div class="content content-main">
             <div class="container">
                 <p class="large">You might not be getting all the sugar from your food.</p>
@@ -162,7 +162,7 @@
         </div>
     </div>
 
-    <div id="check-ketones" class="pane">
+    <div pane-id="check-ketones" class="pane">
         <div class="content content-main">
           <div class="container">
             <p class="large">CHECK YOUR KETONES</p>
@@ -178,7 +178,7 @@
         </div>
     </div>
 
-    <div id="why-ketones" class="pane pane-why">
+    <div pane-id="why-ketones" class="pane pane-why">
         <div class="content content-main">
             <div class="container">
                 <p class="large">You might have unusual ketone when you least expect it!</p>
@@ -192,7 +192,81 @@
         </div>
     </div>
 
-    <div id="result" class="pane">
+    <div pane-id="result" class="pane" data-device="shots" data-bloodsugar="high" data-ketones="large">
+        <div class="content content-main">
+          <div class="container">
+            <p class="large">Sip water/fluid <br />and <br />CALL YOUR DOCTOR <br /> for additional insulin dosing</p>
+            <p><i class="icon icon-face-happy icon-centered"></i></p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="container">
+            <a class="btn btn-default first" href="#contact-us">Continue</a>
+          </div>
+        </div>
+    </div>
+
+    <div pane-id="result" class="pane" data-device="shots" data-bloodsugar="low" data-ketones="large">
+        <div class="content content-main">
+          <div class="container">
+            <p class="large">Sip fluids container sugar and <br />CALL YOUR DOCTOR <br /> for additional insulin dosing</p>
+            <p><i class="icon icon-face-happy icon-centered"></i></p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="container">
+            <a class="btn btn-default first" href="#contact-us">Continue</a>
+          </div>
+        </div>
+    </div>
+
+    <div pane-id="result" class="pane" data-device="pump" data-bloodsugar="high" data-ketones="small">
+        <div class="content content-main">
+          <div class="container">
+            <p class="large">Sip water/fluids; retest in 2 hours and check to see if blood sugar comes down.</p>
+            <p><i class="icon icon-face-happy icon-centered"></i></p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="container">
+            <a class="btn btn-default first" href="#contact-us">Continue</a>
+          </div>
+        </div>
+    </div>
+
+    <div pane-id="result" class="pane" data-device="pump" data-ketones="large">
+        <div class="content content-main">
+          <div class="container">
+            <p class="large">Change infusion set and replace pump with fresh insulin.</p>
+            <p class="large">Next insulin must be given by injection.</p>
+            <p class="large">Call MD for additional dosing.</p>
+            <p><i class="icon icon-face-happy icon-centered"></i></p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="container">
+            <a class="btn btn-default first" href="#contact-us">Continue</a>
+          </div>
+        </div>
+    </div>
+
+    <div pane-id="result" class="pane" data-device="pump" data-bloodsugar="low" data-ketones="small">
+        <div class="content content-main">
+          <div class="container">
+            <p class="large">Sip fluids containing sugar; retest in 2 hours and check to see if <span style="font-weight:bold;text-decoration:underline;">blood sugar comes down.</span></p>
+            <p class="large">Next insulin must be given by injection.</p>
+            <p class="large">Call MD for additional dosing.</p>
+            <p><i class="icon icon-face-happy icon-centered"></i></p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="container">
+            <a class="btn btn-default first" href="#contact-us">Continue</a>
+          </div>
+        </div>
+    </div>
+
+    <div pane-id="result" class="pane">
         <div class="content content-main">
           <div class="container">
             <p class="large">GREAT NEWS!!!</p>
@@ -215,7 +289,7 @@
         </div>
     </div>
 
-    <div id="contact-us" class="pane">
+    <div pane-id="contact-us" class="pane">
         <div class="content content-main">
           <div class="container">
             <p class="large">If you are currently part of the U of M health system</p>
