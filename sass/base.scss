@@ -43,10 +43,10 @@ body.js{
 		font-size: $font-size-base;
 		color:$brand-primary;
 	}
-	.why{
-		font-size: $font-size-small;
-		font-weight:300;
-	}
+}
+
+.btn-why{
+	@extend .btn-default;
 }
 
 .icon{
