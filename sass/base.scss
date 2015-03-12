@@ -37,12 +37,11 @@ body.js{
 		line-height:1.1em;
 	}
 	.small{
-		font-size: $font-size-small;
+		font-size: $font-size-base;
 	}
 	.alert{
-		font-size: $font-size-small;
-		border: 1px $brand-primary dotted;
-		border-radius: $space-size/2;
+		font-size: $font-size-base;
+		color:$brand-primary;
 	}
 	.why{
 		font-size: $font-size-small;
