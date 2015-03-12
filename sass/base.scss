@@ -28,7 +28,7 @@ body.js{
 	margin:0px $space-size*2;
 }
 
-.content-main{
+.pane{
 	padding-top: $space-size/2;
 	padding-bottom:$space-size;
 	text-align:center;
@@ -37,7 +37,8 @@ body.js{
 		line-height:1.1em;
 	}
 	.small{
-		font-size: $font-size-base;
+		font-size: $font-size-small;
+		text-transform: none;
 	}
 	.alert{
 		font-size: $font-size-base;
@@ -118,6 +119,11 @@ body.js{
 	background-color: $btn-default-bg;
 	border-color: $btn-default-border;
 	border-top-width: 1px;
+
+	.container{
+		margin:0px auto;
+		width:100%;
+	}
 
 	.btn{
 		display:block;
