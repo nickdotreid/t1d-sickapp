@@ -1,11 +1,16 @@
 var Page = Backbone.View.extend({
 	events:{
 		'click .back':'back',
+		'click a.btn':'setValue',
 	},
 	back: function(event){
 		event.preventDefault();
 		window.history.back();
-	}
+	},
+	setValue: function(event){
+		var btn = $(event.currentTarget);
+		if(btn.data("set")) this.trigger("change",btn.data("set"));
+	},
 });
 
 var Pane = Page.extend({
@@ -91,6 +96,10 @@ var Workspace = Backbone.Router.extend({
 		}
 		router.currentPane = new Pane({
 			el:matchedPages[0],
+		});
+		router.currentPane.on("change",function(message){
+			var parts = message.split(":");
+			router[parts[0]] = parts[1];
 		});
 		router.currentPane.enter();
 	}
