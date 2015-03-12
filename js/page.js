@@ -48,14 +48,26 @@ var Pane = Page.extend({
 
 var Workspace = Backbone.Router.extend({
 	routes:{
-		"*path":"page", // gotta catch em all
+		":path":"page", // gotta catch em all
+		":path?:args":"page", // gotta catch em all
 	},
 	initialize: function(){
 		new Page({
 			el:$('.navbar:first'),
 		});
 	},
-	page: function(path){
+	page: function(path,args){
+		var device = false;
+		var bloodSugar = false;
+		var ketones = false;
+		if(args){
+			if(args.indexOf('pump')) device = 'pump';
+			if(args.indexOf('shots')) device = 'shots';
+			if(args.indexOf('high')) bloodSugar = 'high';
+			if(args.indexOf('low')) bloodSugar = 'low';
+			if(args.indexOf('small')) ketones = 'small';
+			if(args.indexOf('large')) ketones = 'large';
+		}
 		var router = this;
 		if(router.currentPane) router.currentPane.exit();
 		router.currentPane = false;
