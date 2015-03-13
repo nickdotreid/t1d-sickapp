@@ -76,8 +76,12 @@ var Workspace = Backbone.Router.extend({
 
 		if(path){
 			var matchedPages = $(".pane[pane-id="+path+"]");
-		}else{
+		}
+		if(!path || matchedPages.length < 1){
 			var matchedPages = $('.pane:first');
+			router.device = false;
+			router.bloodsugar = false;
+			router.ketones = false;
 		}
 		if(matchedPages.length > 1){
 			var router = this;
