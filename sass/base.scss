@@ -47,7 +47,25 @@ body.js{
 }
 
 .btn-why{
-	@extend .btn-default;
+	@extend .btn-warning;
+	color:#000;
+	border-color: darken($brand-primary, 10%);
+	border-width:2px;
+	border-radius: $space-size/2;
+background: #ffca30; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffca30 60%, #fcbb00 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#ffca30), color-stop(100%,#fcbb00)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffca30 60%,#fcbb00 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffca30 60%,#fcbb00 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffca30 60%,#fcbb00 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffca30 60%,#fcbb00 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffca30', endColorstr='#fcbb00',GradientType=0 ); /* IE6-9 */
+
+	&:hover{
+		background: darken($brand-primary, 10%);
+		color:#000;
+		border-color: darken($brand-primary, 10%);
+	}
 }
 
 .icon{
