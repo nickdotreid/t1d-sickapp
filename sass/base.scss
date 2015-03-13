@@ -60,8 +60,24 @@ body.js{
 	background-repeat:no-repeat;
 	background-position:0px -5px;
 }
+
+.icon-left{
+	float:left;
+}
+
 .icon-centered{
 	margin: 0px auto;
+}
+
+.icon-trio-centered{
+	width:320px;
+	margin:0px auto;
+	diplay:block;
+	float:none;
+	.icon{
+		margin-left: $space-size;
+		margin-right: $space-size;
+	}
 }
 
 .icon-home{
@@ -69,50 +85,83 @@ body.js{
 	background-position:-95px -5px;
 }
 
+.icon-plus{
+	width:24px;
+	height:22px;
+	background-position:-20px -166px;
+	margin-top:50px;
+	}
+
 .icon-back{
 	width:24px;
+	height:120px;
 	background-position:-0px -5px;
 }
 
 .icon-shots{
 	height:132px;
 	width:115px;
-	background-position:-513px 0px;
+	background-position:-547px -4px;
 }
 .icon-pump{
 	height:132px;
 	width:115px;
-	background-position:-655px 0px;	
+	background-position:-689px -4px;	
 }
 
 .icon-face-sick{
 	width:109px;
 	height:109px;
-	background-position:-202px 0px;
+	background-position:-233px -8px;
 }
 
 .icon-face-happy{
 	width:80px;
 	height:80px;
-	background-position:-202px -129px;
+	background-position:-232px -135px;
 }
 
 .icon-health{
 	width: 97px;
 	height: 115px;
-	background-position:-367px 0px;
+	background-position:-398px -4px;
+}
+
+.icon-stethoscope{
+	width: 104px;
+	height: 120px;
+	background-position:-709px -187px;	
+}
+
+.icon-water-bottle{
+	width: 101px;
+	height: 120px;
+	background-position:-398px -177px;	
+}
+
+.icon-sugar-water{
+	width: 101px;
+	height: 120px;
+	background-position:-555px -182px;	
 }
 
 .icon-check-blood-sugar{
 	width:225px;
 	height:185px;
-	background-position:-825px 0px;
+	background-position:-857px -8px;
+}
+
+.icon-check-blood-sugar-small{
+	width:105px;
+	height:120px;
+	background-position:-927px -229px;
+	margin-top:3px;
 }
 
 .icon-ketones{
 	width:271px;
 	height:108px;
-	background-position:-1106px -33px;	
+	background-position:-1129px -40px;	
 }
 
 .actions{
