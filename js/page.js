@@ -15,12 +15,24 @@ var Page = Backbone.View.extend({
 
 var Pane = Page.extend({
 	initialize: function() {
-		this.render();
+		var pane = this;
+		$(window).resize(function(){
+			pane.render();
+		});
+		pane.render();
 	},
 	render:function(){
-		this.$el.show();
+		var is_visible = this.$el.is(':visible');
+		if(!is_visible) this.$el.show();
 		this.center_content();
-		this.$el.hide();
+		this.$('.icon-trio-centered').each(function(){
+			var div = $(this);
+			var width = _.reduce($('.icon',div),function(num, icon){
+				return num + $(icon).outerWidth(true);
+			}, 0);
+			div.width(width);
+		});
+		if(!is_visible) this.$el.hide();
 	},
 	center_content: function(){
 		/* Adds margin to center content container */
@@ -31,13 +43,13 @@ var Pane = Page.extend({
 
 		if(available_space > 0){
 			this.$('.content').css({
-				'margin-top': available_space/2 + $('.navbar:first').height(),
-				'margin-bottom': available_space/2,
+				'padding-top': available_space/2 + $('.navbar:first').height(),
+				'padding-bottom': available_space/2,
 			});
 		}else{
 			this.$('.content').css({
-				'margin-top': $('.navbar:first').height(),
-				'margin-bottom': '0px',
+				'padding-top': $('.navbar:first').height(),
+				'padding-bottom': this.$('.actions').outerHeight(),
 			});
 		}
 	},
