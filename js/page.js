@@ -17,11 +17,13 @@ var Pane = Page.extend({
 	initialize: function() {
 		var pane = this;
 		$(window).resize(function(){
-			pane.render();
+			if(pane.$el.is(':visible') && !pane.animating ) pane.render();
 		});
 		pane.render();
 	},
 	render:function(){
+		if(this.animating) return false;
+
 		var is_visible = this.$el.is(':visible');
 		if(!is_visible) this.$el.show();
 		this.center_content();
@@ -53,12 +55,52 @@ var Pane = Page.extend({
 			});
 		}
 	},
-	enter: function(){
+	enter: function(callback_func){
+		var pane = this;
 		this.$el.show();
+		this.$el.css({
+			top: $(window).height(),
+		});
+		this.$('.actions').css({
+			bottom: 0 - this.$('.actions').outerHeight(),
+		});
+		this.$el.animate({
+			top:0,
+		},{
+			duration:250,
+			complete:function(){
+				pane.$('.actions').animate({
+					bottom:0,
+				}, 150);
+			}
+		});
 		if(this.$el.hasClass("pane-why")) $('.navbar:not(.pane .navbar)').hide();
 	},
-	exit: function(){
-		this.$el.hide();
+	exit: function(callback_func){
+		var pane = this;
+		this.$el.show();
+		this.$el.css({
+			top: 0,
+		});
+		this.$('.actions').css({
+			bottom: 0,
+		});
+		this.$('.actions').animate({
+			bottom: 0 - this.$('.actions').outerHeight(),
+		},{
+			duration:150,
+			complete:function(){
+				
+			}
+		});
+		pane.$el.animate({
+				top:0 - $(window).height(),
+			}, {
+				duration: 250,
+				complete:function(){
+					pane.$el.hide();
+				}
+			});
 		if(this.$el.hasClass("pane-why")) $('.navbar:not(.pane .navbar)').show();
 	},
 });
