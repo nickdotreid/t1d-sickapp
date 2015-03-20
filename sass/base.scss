@@ -54,12 +54,14 @@ body{
 		font-size: $font-size-base;
 		color:$brand-primary;
 		margin-bottom:0px;
-		ul{
-			padding-left: $space-size;
-		}
-		li{
-			margin-bottom:$space-size;
-		}
+	}
+	ol, ul{
+		text-align:left;
+		padding-left: $space-size;
+	}
+	li{
+		margin-top:$space-size/2;
+		margin-bottom:$space-size/2;
 	}
 }
 
