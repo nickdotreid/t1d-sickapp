@@ -99,6 +99,7 @@ var Pane = Page.extend({
 				duration: 250,
 				complete:function(){
 					pane.$el.hide();
+					pane.remove();
 				}
 			});
 		if(this.$el.hasClass("pane-why")) $('.navbar:not(.pane .navbar)').show();
@@ -114,6 +115,7 @@ var Workspace = Backbone.Router.extend({
 		new Page({
 			el:$('.navbar:first'),
 		});
+		$('body').append("<div class='app-area'></div>");
 	},
 	page: function(path,args){
 		if(args){
@@ -152,8 +154,9 @@ var Workspace = Backbone.Router.extend({
 				return true;
 			});
 		}
+		var page = $(matchedPages[0]).clone().appendTo('.app-area');
 		router.currentPane = new Pane({
-			el:matchedPages[0],
+			el:page[0],
 		});
 		router.currentPane.on("change",function(message){
 			var parts = message.split(":");
