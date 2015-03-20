@@ -14,6 +14,7 @@ var Page = Backbone.View.extend({
 });
 
 var Pane = Page.extend({
+	animation_duration:300,
 	initialize: function() {
 		var pane = this;
 		$(window).resize(function(){
@@ -67,11 +68,11 @@ var Pane = Page.extend({
 		this.$el.animate({
 			top:0,
 		},{
-			duration:250,
+			duration:pane.animation_duration,
 			complete:function(){
 				pane.$('.actions').animate({
 					bottom:0,
-				}, 150);
+				}, pane.animation_duration/2);
 			}
 		});
 		if(this.$el.hasClass("pane-why")) $('.navbar:not(.pane .navbar)').hide();
@@ -85,18 +86,10 @@ var Pane = Page.extend({
 		this.$('.actions').css({
 			bottom: 0,
 		});
-		this.$('.actions').animate({
-			bottom: 0 - this.$('.actions').outerHeight(),
-		},{
-			duration:150,
-			complete:function(){
-				
-			}
-		});
 		pane.$el.animate({
 				top:0 - $(window).height(),
 			}, {
-				duration: 250,
+				duration: pane.animation_duration,
 				complete:function(){
 					pane.$el.hide();
 					pane.remove();
