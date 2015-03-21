@@ -28,6 +28,9 @@ body{
 	height:20px;
 	margin-bottom:0px;
 }
+.navbar .icon{
+	margin-top:$space-size;
+}
 
 .pane-why{
 	background-color: $brand-primary;
@@ -41,7 +44,9 @@ body{
 }
 
 .pane{
-	text-align:center;
+	.centered{
+		text-align:center;
+	}
 	.large{
 		font-size:$font-size-large;
 		line-height:1.1em;
@@ -51,9 +56,8 @@ body{
 		text-transform: none;
 	}
 	.alert{
-		font-size: $font-size-base;
 		color:$brand-primary;
-		margin-bottom:0px;
+		padding:0px;
 	}
 	ol, ul{
 		text-align:left;
@@ -63,6 +67,12 @@ body{
 		margin-top:$space-size/2;
 		margin-bottom:$space-size/2;
 	}
+}
+
+.btn-centered{
+	display:block;
+	width:auto;
+	margin:$space-size/2 auto;
 }
 
 .btn-why{
@@ -87,6 +97,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffca30', end
 	}
 }
 
+@import "_sprite";
 .icon{
 	display:block;
 	width:$space-size*3;
@@ -106,99 +117,75 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffca30', end
 	margin: 0px auto;
 }
 
-.icon-trio-centered{
-	width:320px;
-	margin:0px auto;
-	diplay:block;
-	float:none;
-	.icon{
-		margin-left: $space-size/2;
-		margin-right: $space-size/2;
-	}
-}
-
 .icon-home{
-	width:26px;
-	background-position:-125px -25px;
+	@include sprite($home);
 }
-
-.icon-plus{
-	width:24px;
-	height:22px;
-	background-position:-20px -166px;
-	margin-top:50px;
-	}
 
 .icon-back{
-	width:24px;
-	height:120px;
-	background-position:-31px -25px;
+	@include sprite($arrow);
 }
 
 .icon-shots{
-	height:132px;
-	width:115px;
-	background-position:-547px -4px;
+	@include sprite($shots);
 }
 .icon-pump{
-	height:132px;
-	width:115px;
-	background-position:-689px -4px;	
+	@include sprite($pump);
 }
 
 .icon-face-sick{
-	width:109px;
-	height:109px;
-	background-position:-233px -8px;
+	@include sprite($sick-face);
 }
 
 .icon-face-happy{
-	width:80px;
-	height:80px;
-	background-position:-232px -135px;
+	@include sprite($happy-face);
 }
 
 .icon-health{
-	width: 97px;
-	height: 115px;
-	background-position:-398px -4px;
+	@include sprite($health);
 }
 
 .icon-stethoscope{
-	width: 104px;
-	height: 120px;
-	background-position:-709px -187px;	
+	@include sprite($stethascope);
 }
 
 .icon-water-bottle{
-	width: 101px;
-	height: 120px;
-	background-position:-398px -177px;	
+	@include sprite($water)
 }
 
 .icon-sugar-water{
-	width: 101px;
-	height: 120px;
-	background-position:-555px -182px;	
+	@include sprite($sugar-water)	
 }
 
 .icon-check-blood-sugar{
-	width:225px;
-	height:185px;
-	background-position:-857px -8px;
+	@include sprite($check-blood-sugar);
 }
 
 .icon-check-blood-sugar-small{
-	width:105px;
-	height:120px;
-	background-position:-927px -229px;
-	margin-top:3px;
+	@include sprite($check-blood-sugar-small);
 }
 
 .icon-ketones{
-	width:280px;
-	height:108px;
-	background-position:-1129px -229px;	
+	@include sprite($happy-pee);	
+}
+
+.icon-comb-stethascope-health{
+	@include sprite($comb-stethascope-health);
+}
+
+.icon-comb-sugar-water-check-blood-sugar{
+	@include sprite($comb-sugar-water-check-blood-sugar);
+}
+
+.icon-comb-sugar-water-health{
+	@include sprite($comb-sugar-water-health);
+}
+
+.icon-comb-water-check-blood-sugar{
+	@include sprite($comb-water-check-blood-sugar);
+}
+
+.icon-comb-water-health{
+	@include sprite($comb-water-health);
 }
 
 .actions{
