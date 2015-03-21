@@ -1,0 +1,23 @@
+{
+  "name": "SickApp",
+  "version": "0.1.0",
+  "homepage": "https://github.com/nickdotreid/t1d-sickapp",
+  "authors": [
+    "Nick Reid <nickreid@nickreid.com>"
+  ],
+  "description": "A application to diagnose DKA",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "bootstrap-sass-official": "~3.3.3"
+  }
+}
