@@ -28,13 +28,6 @@ var Pane = Page.extend({
 		var is_visible = this.$el.is(':visible');
 		if(!is_visible) this.$el.show();
 		this.center_content();
-		this.$('.icon-trio-centered').each(function(){
-			var div = $(this);
-			var width = _.reduce($('.icon',div),function(num, icon){
-				return num + $(icon).outerWidth(true);
-			}, 0);
-			div.width(width);
-		});
 		if(!is_visible) this.$el.hide();
 	},
 	center_content: function(){
