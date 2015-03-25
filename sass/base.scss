@@ -24,6 +24,17 @@ body{
 	}
 }
 
+strong{
+	text-transform: uppercase;
+	font-weight: 300;
+	text-decoration: underline;
+	display:block;
+}
+
+.btn{
+	white-space:normal;
+}
+
 .navbar{
 	height:20px;
 	margin-bottom:0px;
@@ -45,6 +56,7 @@ body{
 }
 
 .pane{
+	text-align: center;
 	.centered{
 		text-align:center;
 	}
@@ -58,7 +70,7 @@ body{
 	}
 	.alert{
 		color:$brand-primary;
-		padding:0px;
+		padding:$space-size 0px 0px;
 	}
 	ol, ul{
 		text-align:left;
@@ -108,6 +120,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffca30', end
 	background-image:url('../img/sprites.png');
 	background-repeat:no-repeat;
 	background-position:0px -5px;
+	margin-bottom: $space-size/2;
 }
 
 .icon-left{
@@ -115,7 +128,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffca30', end
 }
 
 .icon-centered{
-	margin: 0px auto;
+	margin: $space-size/2 auto;
 }
 
 .icon-home{
