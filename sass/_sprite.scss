@@ -15,8 +15,8 @@ $pump: -4px -1518px 111px 131px;
 $comb-water-health: -4px -1657px 275px 131px;
 $stethascope: -4px -1796px 111px 131px;
 $water: -4px -1935px 111px 131px;
-$happy-pee: -4px -2074px 158px 182px;
-$check-blood-sugar: -4px -2264px 223px 191px;
+$happy-pee: -4px -2074px 157px 181px;
+$check-blood-sugar: -4px -2263px 223px 191px;
 
 @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
